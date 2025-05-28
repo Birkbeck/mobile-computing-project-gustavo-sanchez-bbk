@@ -12,7 +12,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import bbk.gustavosanchez.culinarycompanion.ui.theme.CulinaryCompanionTheme
 import androidx.compose.ui.Alignment
+// import stuff for logo
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
 
+// Main Sauce :)
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,12 +42,22 @@ fun HomeScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(modifier = Modifier.height(32.dp))
-        // I think we should add a logo to make it look neater
+        Image(
+            painter = painterResource(id = R.drawable.culinary),
+            contentDescription = "App Logo",
+            modifier = Modifier
+                .size(350.dp)
+                .padding(bottom = 16.dp)
+        )
+        /*Uncomment this if we prefer text? Still not sold on the logo looks weird probably
+        the proportions
         Text(
             text = "Culinary Companion by Gustavo",
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(bottom = 24.dp)
         )
+
+         */
 
         // One button per line as per our wireframe - looks neater
         categories.forEach { category ->
