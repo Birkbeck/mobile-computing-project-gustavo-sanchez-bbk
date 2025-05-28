@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HomeScreen() {
-    val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Dessrts", "Other")
+    val categories = listOf("Breakfast", "Brunch", "Lunch", "Dinner", "Desserts", "Other")
 
     Column(modifier = Modifier.padding(16.dp)) {
         Text(
