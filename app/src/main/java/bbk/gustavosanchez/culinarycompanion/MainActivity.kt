@@ -1,24 +1,27 @@
-package co.uk.bbk.culinarycompanionapp
+package bbk.gustavosanchez.culinarycompanion
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import co.uk.bbk.culinarycompanionapp.ui.theme.CulinaryCompanionAppTheme
+import androidx.compose.ui.unit.dp
+import bbk.gustavosanchez.culinarycompanion.ui.theme.CulinaryCompanionTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CulinaryCompanionAppTheme {
+            CulinaryCompanionTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     HomeScreen()
                 }
@@ -33,7 +36,7 @@ fun HomeScreen() {
 
     Column(modifier = Modifier.padding(16.dp)) {
         Text(
-            text = "Culinary Companion",
+            text = "Culinary Companion by Gustavo",
             style = MaterialTheme.typography.headlineMedium
         )
 
@@ -61,7 +64,7 @@ fun HomeScreen() {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    CulinaryCompanionAppTheme {
-        Greeting("Android")
+    CulinaryCompanionTheme {
+        HomeScreen()
     }
 }
