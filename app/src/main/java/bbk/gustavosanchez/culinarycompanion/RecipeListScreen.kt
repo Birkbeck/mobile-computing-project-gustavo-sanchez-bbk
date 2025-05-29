@@ -1,3 +1,5 @@
+// Culinary Companion App - RecipeListScreen
+
 package bbk.gustavosanchez.culinarycompanion
 
 //import all the things !
@@ -13,11 +15,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import bbk.gustavosanchez.culinarycompanion.ui.theme.CulinaryCompanionTheme
 import androidx.compose.material3.Icon
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.IconButton
 
 
 //Recipe List screen
 @Composable
-fun RecipeListScreen() {
+fun RecipeListScreen(onBackClick: () -> Unit = {}) {
     val mockRecipes = listOf("Recipe 1", "Recipe 2", "Recipe 3")
 
     Column(
@@ -26,6 +30,13 @@ fun RecipeListScreen() {
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Our back button
+        IconButton(onClick = { onBackClick() }) {
+            Icon(
+                imageVector = Icons.Default.ArrowBack,
+                contentDescription = "Back"
+            )
+        }
         // Title
         Text(
             text = "Recipe List",
@@ -48,10 +59,12 @@ fun RecipeListScreen() {
         // Spacer to separate from Add button
         Spacer(modifier = Modifier.height(40.dp))
 
-        // Circular Add button + label
+        // Add Recipe Button
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+
+
             Button(
                 onClick = { /* TODO: Add new recipe */ },
                 shape = CircleShape,

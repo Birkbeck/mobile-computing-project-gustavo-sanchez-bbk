@@ -1,3 +1,5 @@
+// Culinary Companion App - Birkbeck University - Gustavo Sanchez Rosales
+
 package bbk.gustavosanchez.culinarycompanion
 
 import android.os.Bundle
