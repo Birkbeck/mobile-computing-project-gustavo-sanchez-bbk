@@ -33,6 +33,7 @@ fun RecipeListScreen() {
         // Recipe items - we still dont have recipes
         LazyColumn(
             verticalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxSize()
         ) {
             items(mockRecipes) { recipe ->
