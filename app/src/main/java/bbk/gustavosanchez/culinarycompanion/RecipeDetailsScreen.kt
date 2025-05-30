@@ -53,7 +53,7 @@ fun RecipeDetailsScreen(onBackClick: () -> Unit = {}) {
             Text("Guacamole") // Obviously to be changed when functionality is needed for CW2
         }
 
-        // Ingredients section
+        // Ingredients
         Text(
             text = "Ingredients",
             style = MaterialTheme.typography.titleMedium,
@@ -65,7 +65,7 @@ fun RecipeDetailsScreen(onBackClick: () -> Unit = {}) {
             modifier = Modifier.padding(bottom = 24.dp)
         )
 
-        // Instructions section
+        // Instructions
         Text(
             text = "Instructions",
             style = MaterialTheme.typography.titleMedium,
