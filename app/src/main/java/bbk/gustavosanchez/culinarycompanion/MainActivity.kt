@@ -52,7 +52,7 @@ fun HomeScreen() {
                 .padding(bottom = 16.dp)
         )
         /*Uncomment this if we prefer text? Still not sold on the logo looks weird probably
-        the proportions
+        mainly the proportions
         Text(
             text = "Culinary Companion by Gustavo",
             style = MaterialTheme.typography.headlineMedium,
