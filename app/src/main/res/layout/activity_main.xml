@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!--This is our logo details created with Canva-->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/culinary"
+            android:contentDescription="App Logo"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp" />
+
+        <!--  Our app Title  -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Culinary Companion"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add the recipe categories -->
+        <Button
+            android:id="@+id/btnBreakfast"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnBrunch"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Brunch"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnLunch"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnDinner"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnDesserts"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Desserts"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnOther"
+            android:layout_width="80%"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>
