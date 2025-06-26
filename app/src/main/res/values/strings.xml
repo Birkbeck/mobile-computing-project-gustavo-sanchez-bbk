@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Culinary Companion</string>
+    <string name="app_logo_description">App Logo</string>
+    <string name="btn_breakfast">Breakfast</string>
+    <string name="btn_brunch">Brunch</string>
+    <string name="btn_lunch">Lunch</string>
+    <string name="btn_dinner">Dinner</string>
+    <string name="btn_desserts">Desserts</string>
+    <string name="btn_other">Other</string>
+    <string name="app_title">Culinary Companion</string>
 </resources>

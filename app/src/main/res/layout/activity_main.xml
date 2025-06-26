@@ -16,16 +16,15 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:src="@drawable/culinary"
-            android:contentDescription="App Logo"
+            android:contentDescription="@string/app_logo_description"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp" />
 
-        <!--  Our app Title  -->
         <TextView
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Culinary Companion"
+            android:text="@string/app_title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
@@ -33,45 +32,51 @@
         <!-- Add the recipe categories -->
         <Button
             android:id="@+id/btnBreakfast"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Breakfast"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_breakfast"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
         <Button
             android:id="@+id/btnBrunch"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Brunch"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_brunch"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
         <Button
             android:id="@+id/btnLunch"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lunch"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_lunch"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
         <Button
             android:id="@+id/btnDinner"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dinner"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_dinner"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
         <Button
             android:id="@+id/btnDesserts"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Desserts"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_desserts"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
         <Button
             android:id="@+id/btnOther"
-            android:layout_width="80%"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Other"
-            android:layout_marginBottom="8dp" />
+            android:text="@string/btn_other"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="32dp" />
 
     </LinearLayout>
 </ScrollView>
