@@ -1,0 +1,10 @@
+package bbk.gustavosanchez.culinarycompanion.model
+
+@Entity(tableName = "recipes")
+data class Recipe(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val title: String,
+    val ingredients: String,
+    val instructions: String,
+    val category: String
+)
