@@ -8,4 +8,5 @@
     <string name="btn_desserts">Desserts</string>
     <string name="btn_other">Other</string>
     <string name="app_title">Culinary Companion</string>
+    <string name="add_new_recipe">Add New Recipe</string>
 </resources>
