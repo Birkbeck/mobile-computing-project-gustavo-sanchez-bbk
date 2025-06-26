@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Input for recipe title -->
+        <EditText
+            android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_title"
+            android:minHeight="48dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Input for ingredients -->
+        <EditText
+            android:id="@+id/inputIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingredients"
+            android:minLines="3"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Input for preparation steps -->
+        <EditText
+            android:id="@+id/inputSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/preparation_steps"
+            android:minLines="4"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_recipe"
+            android:backgroundTint="@color/logo_blue"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>

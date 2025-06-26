@@ -9,4 +9,8 @@
     <string name="btn_other">Other</string>
     <string name="app_title">Culinary Companion</string>
     <string name="add_new_recipe">Add New Recipe</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="preparation_steps">Preparation Steps</string>
+    <string name="save_recipe">Save Recipe</string>
 </resources>
