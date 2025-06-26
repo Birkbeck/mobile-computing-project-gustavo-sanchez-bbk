@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_breakfast"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
         <Button
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_brunch"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
         <Button
@@ -52,6 +54,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_lunch"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
         <Button
@@ -60,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_dinner"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
         <Button
@@ -68,6 +72,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_desserts"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
         <Button
@@ -76,6 +81,7 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_other"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/logo_blue"
             android:layout_marginHorizontal="32dp" />
 
     </LinearLayout>

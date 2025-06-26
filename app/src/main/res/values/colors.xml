@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<!--For our buttons to match the logo-->
+    <color name="logo_blue">#005CB9</color>
 </resources>
