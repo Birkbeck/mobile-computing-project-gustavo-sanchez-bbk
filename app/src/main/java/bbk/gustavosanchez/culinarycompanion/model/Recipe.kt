@@ -2,6 +2,8 @@ package bbk.gustavosanchez.culinarycompanion.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+// do we still need this ?
+import java.io.Serializable
 
 @Entity(tableName = "recipes")
 data class Recipe(
@@ -10,4 +12,5 @@ data class Recipe(
     val ingredients: String,
     val instructions: String,
     val category: String
-)
+) : Serializable
+
