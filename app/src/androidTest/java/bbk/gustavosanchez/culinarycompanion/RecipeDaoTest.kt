@@ -54,7 +54,13 @@ class RecipeDaoTest {
         dao.insert(recipe)
 
         val allRecipes = dao.getAllRecipes().getOrAwaitValue()
-        assertThat(allRecipes).contains(recipe)
+        assertThat(allRecipes).isNotEmpty()
+        val insertedRecipe = allRecipes[0]
+        assertThat(insertedRecipe.title).isEqualTo("Test Recipe")
+        assertThat(insertedRecipe.ingredients).isEqualTo("Test Ingredients")
+        assertThat(insertedRecipe.instructions).isEqualTo("Test Instructions")
+        assertThat(insertedRecipe.category).isEqualTo("Lunch")
+
     }
 
     @Test
