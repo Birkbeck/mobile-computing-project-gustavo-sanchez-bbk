@@ -27,9 +27,16 @@ class RecipeListActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerRecipes)
         addRecipeButton = findViewById(R.id.btnAddRecipe)
 
-        adapter = RecipeAdapter()
+        adapter = RecipeAdapter { recipe ->
+            val intent = Intent(this, EditRecipeActivity::class.java)
+            intent.putExtra("recipe", recipe as java.io.Serializable)
+            startActivity(intent)
+        }
+
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
 
         // Initialise ViewModel
         recipeViewModel = ViewModelProvider(this).get(RecipeViewModel::class.java)
