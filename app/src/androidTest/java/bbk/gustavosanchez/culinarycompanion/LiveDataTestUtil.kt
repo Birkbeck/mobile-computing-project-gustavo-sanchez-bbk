@@ -1,8 +1,5 @@
-// This is our Live Data Test Utility
-
 package bbk.gustavosanchez.culinarycompanion
 
-//import everything
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import java.util.concurrent.CountDownLatch
@@ -17,8 +14,8 @@ fun <T> LiveData<T>.getOrAwaitValue(
     val latch = CountDownLatch(1)
 
     val observer = object : Observer<T> {
-        override fun onChanged(o: T) {  // note: o: T, not T?
-            data = o
+        override fun onChanged(t: T) {
+            data = t
             latch.countDown()
             this@getOrAwaitValue.removeObserver(this)
         }
@@ -26,17 +23,6 @@ fun <T> LiveData<T>.getOrAwaitValue(
 
     this.observeForever(observer)
 
-    if (!latch.await(time, timeUnit)) {
-        throw TimeoutException("LiveData value was never set.")
-    }
-
-    @Suppress("UNCHECKED_CAST")
-    return data as T
-}
-
-    this.observeForever(observer)
-
-    // Don't wait forever if LiveData is not set.
     if (!latch.await(time, timeUnit)) {
         throw TimeoutException("LiveData value was never set.")
     }

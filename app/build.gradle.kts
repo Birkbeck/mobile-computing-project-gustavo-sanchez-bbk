@@ -38,6 +38,8 @@ android {
 
 dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
+    implementation(libs.androidx.runner)
+    implementation(libs.core.ktx)
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
@@ -57,5 +59,7 @@ dependencies {
     androidTestImplementation("androidx.test:core:1.5.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+
 
 }

@@ -1,20 +1,23 @@
-// This is our RecipeDao Testing kotlin file
-
 package bbk.gustavosanchez.culinarycompanion
 
-//import everything for testing
+import com.google.common.truth.Truth.assertThat
+import bbk.gustavosanchez.culinarycompanion.getOrAwaitValue
+import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.room.Room
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.SmallTest
 import bbk.gustavosanchez.culinarycompanion.data.RecipeDao
 import bbk.gustavosanchez.culinarycompanion.data.RecipeDatabase
 import bbk.gustavosanchez.culinarycompanion.model.Recipe
 import kotlinx.coroutines.runBlocking
-import org.junit.*
+import org.junit.After
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
 import org.junit.rules.TestRule
-import androidx.room.Room
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
-import com.google.common.truth.Truth.assertThat
+
+
 
 @SmallTest
 class RecipeDaoTest {
@@ -39,9 +42,15 @@ class RecipeDaoTest {
         database.close()
     }
 
+    // As per coursework guidelines, four tests each test Class should be pretty descriptive
     @Test
     fun insertRecipeAndGetAll() = runBlocking {
-        val recipe = Recipe(title = "Test Recipe", ingredients = "Test Ingredients", instructions = "Test Instructions", category = "Lunch")
+        val recipe = Recipe(
+            title = "Test Recipe",
+            ingredients = "Test Ingredients",
+            instructions = "Test Instructions",
+            category = "Lunch"
+        )
         dao.insert(recipe)
 
         val allRecipes = dao.getAllRecipes().getOrAwaitValue()
@@ -50,7 +59,8 @@ class RecipeDaoTest {
 
     @Test
     fun updateRecipe() = runBlocking {
-        val recipe = Recipe(title = "Test", ingredients = "I1", instructions = "Steps", category = "Dinner")
+        val recipe =
+            Recipe(title = "Test", ingredients = "I1", instructions = "Steps", category = "Dinner")
         dao.insert(recipe)
 
         val inserted = dao.getAllRecipes().getOrAwaitValue()[0]
@@ -64,7 +74,12 @@ class RecipeDaoTest {
 
     @Test
     fun deleteRecipe() = runBlocking {
-        val recipe = Recipe(title = "Delete Test", ingredients = "I1", instructions = "Steps", category = "Brunch")
+        val recipe = Recipe(
+            title = "Delete Test",
+            ingredients = "I1",
+            instructions = "Steps",
+            category = "Brunch"
+        )
         dao.insert(recipe)
 
         val inserted = dao.getAllRecipes().getOrAwaitValue()[0]
@@ -72,5 +87,11 @@ class RecipeDaoTest {
 
         val allRecipes = dao.getAllRecipes().getOrAwaitValue()
         assertThat(allRecipes).doesNotContain(inserted)
+    }
+
+    @Test
+    fun getAllRecipesEmptyReturnsEmptyList() = runBlocking {
+        val allRecipes = dao.getAllRecipes().getOrAwaitValue()
+        assertThat(allRecipes).isEmpty()
     }
 }
