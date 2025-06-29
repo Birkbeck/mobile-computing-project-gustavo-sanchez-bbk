@@ -11,15 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CulinaryCompanion">
+
+        <!-- RecipeListActivity declaration -->
+        <activity android:name=".RecipeListActivity" />
+
+        <!-- Add the Add Recipe Activity -->
+        <activity android:name=".AddRecipeActivity" />
+        <!-- Add the Add Edit Recipe Activity -->
+        <activity android:name=".EditRecipeActivity" />
+
+        <!-- MainActivity declaration with launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

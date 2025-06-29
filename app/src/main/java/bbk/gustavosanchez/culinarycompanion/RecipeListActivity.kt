@@ -17,12 +17,15 @@ class RecipeListActivity : AppCompatActivity() {
     private lateinit var recipeViewModel: RecipeViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var addRecipeButton: Button
+
     // Now it should not give any errors
     private lateinit var adapter: RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_list)
+
+        val category = intent.getStringExtra("CATEGORY")
 
         recyclerView = findViewById(R.id.recyclerRecipes)
         addRecipeButton = findViewById(R.id.btnAddRecipe)
@@ -33,17 +36,16 @@ class RecipeListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
-
 
         // Initialise ViewModel
         recipeViewModel = ViewModelProvider(this).get(RecipeViewModel::class.java)
 
-        // recipes LiveData
+        // Filter recipes by category
         recipeViewModel.allRecipes.observe(this) { recipes ->
-            adapter.setRecipes(recipes)
+            val filteredRecipes = recipes.filter { it.category == category }
+            adapter.setRecipes(filteredRecipes)
         }
 
         // Navigate to AddRecipeActivity
