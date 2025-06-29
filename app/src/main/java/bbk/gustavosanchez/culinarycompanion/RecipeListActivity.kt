@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-//import RecipeAdapter but we havent created the class
+//now it should be fine as we have created RecipeAdapter kotlin file
 import bbk.gustavosanchez.culinarycompanion.adapter.RecipeAdapter
 import bbk.gustavosanchez.culinarycompanion.viewmodel.RecipeViewModel
 
@@ -17,7 +17,7 @@ class RecipeListActivity : AppCompatActivity() {
     private lateinit var recipeViewModel: RecipeViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var addRecipeButton: Button
-    // this should result in class not found because we havent created the Recipe Adapter class
+    // Now it should not give any errors
     private lateinit var adapter: RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
