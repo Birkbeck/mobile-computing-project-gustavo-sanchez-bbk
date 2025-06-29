@@ -40,6 +40,22 @@
             android:inputType="textMultiLine"
             android:layout_marginBottom="12dp" />
 
+        <!-- Input for recipe title -->
+        <EditText
+            android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_title"
+            android:minHeight="48dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Adding a spinner here for category selection -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
         <!-- Save button -->
         <Button
             android:id="@+id/btnSave"
