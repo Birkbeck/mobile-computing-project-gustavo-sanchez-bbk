@@ -56,6 +56,24 @@
             android:backgroundTint="@color/logo_blue"
             android:textColor="@android:color/white"
             android:layout_marginTop="12dp" />
+        <!-- Delete button properties -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Recipe"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+        <!-- Button to go to main screen -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:backgroundTint="@color/logo_blue"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 </ScrollView>

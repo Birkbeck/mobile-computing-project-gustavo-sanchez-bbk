@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import bbk.gustavosanchez.culinarycompanion.model.Recipe
 import bbk.gustavosanchez.culinarycompanion.viewmodel.RecipeViewModel
+import android.view.View
+import android.content.Intent
 
 class EditRecipeActivity : AppCompatActivity() {
 
@@ -32,6 +34,7 @@ class EditRecipeActivity : AppCompatActivity() {
         inputIngredients = findViewById(R.id.inputIngredients)
         inputSteps = findViewById(R.id.inputSteps)
         updateButton = findViewById(R.id.btnSave)
+        deleteButton = findViewById(R.id.btnDelete)
         spinnerCategory = findViewById(R.id.spinnerCategory)
 
         // Change button text to 'Update Recipe'
@@ -59,13 +62,28 @@ class EditRecipeActivity : AppCompatActivity() {
             updateRecipe()
         }
 
-        // ✅ Delete button (optional – add in XML or dynamically if needed)
-        deleteButton = Button(this).apply {
-            text = "Delete Recipe"
-            setBackgroundColor(resources.getColor(android.R.color.holo_red_dark))
-            setTextColor(resources.getColor(android.R.color.white))
+        deleteButton.visibility = View.VISIBLE
+        deleteButton.setOnClickListener {
+            deleteRecipe()
         }
-        (updateButton.parent as? LinearLayout)?.addView(deleteButton)
+
+        // Home button setup
+        val homeButton = findViewById<Button>(R.id.btnHome)
+        homeButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
+        }
+
+
+        updateButton.setOnClickListener {
+            updateRecipe()
+        }
+
+        //  Delete button (added in XML)
+        deleteButton = findViewById(R.id.btnDelete)
+        deleteButton.visibility = View.VISIBLE
 
         deleteButton.setOnClickListener {
             deleteRecipe()

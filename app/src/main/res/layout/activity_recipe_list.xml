@@ -15,6 +15,15 @@
         android:backgroundTint="@color/logo_blue"
         android:textColor="@android:color/white" />
 
+    <!-- Button to go to main screen -->
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:backgroundTint="@color/logo_blue"
+        android:layout_marginTop="16dp"/>
+
     <!-- Recyclerview to display the list of recipes -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRecipes"
